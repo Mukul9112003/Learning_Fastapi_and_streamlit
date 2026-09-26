@@ -1,4 +1,6 @@
-from pydantic import BaseModel,Field
+from pydantic import BaseModel, Field
+
+
 class post_request_model(BaseModel):
     name:str
     id:int

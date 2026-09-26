@@ -1,6 +1,7 @@
-from fastapi import FastAPI,status,HTTPException,Request
-from pydantic import BaseModel,Field
+from fastapi import FastAPI, Request, status
 from fastapi.responses import JSONResponse
+from pydantic import BaseModel, Field
+
 app=FastAPI()
 class addres(BaseModel):
     city:str

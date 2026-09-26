@@ -1,5 +1,7 @@
 from repository.User.User import DataBase
-class UserService():
+
+
+class UserService:
     def __init__(self,db:DataBase):
         self.db=db
     def register(self,data):

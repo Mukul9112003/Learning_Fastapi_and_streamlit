@@ -1,12 +1,17 @@
-from fastapi import APIRouter,Depends
+from fastapi import APIRouter, Depends
+
 users=APIRouter()
 from pydantic import BaseModel
+
+
 class register_user(BaseModel):
     username:str
     password:str
 from database.database_connection import db_session
 from database.table import user
 from sqlalchemy.orm import Session
+
+
 def register_request(data:register_user,db:Session):
     existing_user=(db.query(user).filter(user.username==data.username).first())
     if existing_user:

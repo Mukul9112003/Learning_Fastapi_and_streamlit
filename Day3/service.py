@@ -1,6 +1,8 @@
-from Day3.data import patients
+
 from Day3.custom_exception import MyException
-from fastapi import HTTPException,status
+from Day3.data import patients
+
+
 def get_patients():
     return patients
 def get_patients_by_id(number):

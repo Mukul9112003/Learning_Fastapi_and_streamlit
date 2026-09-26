@@ -1,5 +1,5 @@
 import streamlit as st
-import requests
+
 st.header("Second App")
 st.markdown(
 '''

@@ -1,5 +1,6 @@
-import streamlit as st
 import requests
+import streamlit as st
+
 st.title("Patient ")
 st.header("hospital ")
 st.image("https://cdn.pixabay.com/photo/2025/02/04/23/03/fish-9382908_1280.jpg")

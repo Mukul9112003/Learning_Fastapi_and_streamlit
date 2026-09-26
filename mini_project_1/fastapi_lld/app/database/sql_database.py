@@ -1,8 +1,6 @@
+from app.models.user import Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-
-from app.models.user import Base
-
 
 DATABASE_URL = "sqlite:///./users.db"
 

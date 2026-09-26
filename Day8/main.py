@@ -1,9 +1,10 @@
-from fastapi import FastAPI,Depends
-from sqlalchemy.orm import Session
+from Database.sql_dataconnection import engine, get_database
+from fastapi import Depends, FastAPI
 from Model.base import Base
-from Services.user_service import UserService
-from Database.sql_dataconnection import engine,get_database
 from repository.User.databases import Sql_Database
+from Services.user_service import UserService
+from sqlalchemy.orm import Session
+
 Base.metadata.create_all(bind=engine)
 app=FastAPI(title="this is my first backend")
 app.get("/")

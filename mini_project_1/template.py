@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 project = "mini_project_1/fastapi_lld"

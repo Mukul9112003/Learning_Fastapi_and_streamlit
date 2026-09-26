@@ -1,6 +1,7 @@
-from fastapi import FastAPI,Depends,status,HTTPException,Request
-from sqlalchemy import create_engine,Integer,String,Column
-from sqlalchemy.orm import sessionmaker,declarative_base,Session
+from fastapi import Depends, FastAPI, Request
+from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy.orm import Session, declarative_base, sessionmaker
+
 BASE=declarative_base()
 DATABASE_URL="sqlite:///./test.db"
 engine=create_engine(DATABASE_URL,connect_args={"check_same_thread":False})

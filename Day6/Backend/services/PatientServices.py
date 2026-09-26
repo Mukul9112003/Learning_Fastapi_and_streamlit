@@ -1,6 +1,8 @@
-from Database.data_base_connection import db_session,patientTable
 from customException.exc import MyException
+from Database.data_base_connection import patientTable
 from sqlalchemy.orm import Session
+
+
 def patient_create(data,db:Session):
     table=patientTable(
         name=data.name,

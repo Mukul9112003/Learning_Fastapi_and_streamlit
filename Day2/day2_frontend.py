@@ -1,5 +1,6 @@
+import requests
 import streamlit as st
-import requests 
+
 st.title("Learning request")
 st.subheader("Day2")
 c1='''

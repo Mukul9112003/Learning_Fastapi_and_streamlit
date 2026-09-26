@@ -1,6 +1,14 @@
 from fastapi import APIRouter
-from model.patient import post_request_model,put_request_model,patch_request_model
-from services.service import get_patient_data,get_patient_data_by_id,post_patient_data,put_patient_data,patch_patient_data,delete_patient_data
+from model.patient import patch_request_model, post_request_model, put_request_model
+from services.service import (
+    delete_patient_data,
+    get_patient_data,
+    get_patient_data_by_id,
+    patch_patient_data,
+    post_patient_data,
+    put_patient_data,
+)
+
 patient=APIRouter()
 @patient.get("/patient")
 def get_patient():

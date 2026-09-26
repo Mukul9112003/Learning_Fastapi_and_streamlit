@@ -1,12 +1,10 @@
-from fastapi import Depends, FastAPI
-
+from app.database.sql_database import create_tables
 from app.dependencies.repository import get_user_repository
 from app.models.user import User
 from app.repositories.user_repository import UserRepository
 from app.schemas.user import UserCreate
 from app.services.user_service import UserService
-from app.database.sql_database import create_tables
-
+from fastapi import Depends, FastAPI
 
 app = FastAPI()
 

@@ -1,4 +1,6 @@
-from pydantic_settings import BaseSettings,SettingsConfigDict
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
 class Setting(BaseSettings):
     DATABASE_URL:str
     SECRET_KEY:str

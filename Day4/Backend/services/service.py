@@ -1,5 +1,7 @@
 from Database.database import patients
-from exception.custom_exception import MyException 
+from exception.custom_exception import MyException
+
+
 def get_patient_data():
     return patients
 def get_patient_data_by_id(id):

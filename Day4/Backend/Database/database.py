@@ -3,9 +3,9 @@ patients=[
     {"id":2,"name":"B","age":20,"role":"A"},
     {"id":3,"name":"C","age":20,"role":"A"},
 ]
-from fastapi import FastAPI,HTTPException,Request
-from sqlalchemy import create_engine,String,Integer,Column
-from sqlalchemy.orm import declarative_base,sessionmaker,Session
+from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy.orm import declarative_base, sessionmaker
+
 DATABASE="localhost:8086:/company_db"
 engine=create_engine(DATABASE,connect_args={"check_same_thread":False})
 sessionLocal=sessionmaker(bind=engine)

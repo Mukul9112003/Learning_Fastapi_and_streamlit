@@ -1,7 +1,8 @@
-from fastapi import FastAPI,Request,HTTPException,status
-from fastapi.responses import JSONResponse
 from exception.custom_exception import MyException
+from fastapi import FastAPI, Request, status
+from fastapi.responses import JSONResponse
 from route.patient_route import patient
+
 app=FastAPI()
 @app.exception_handler(MyException)
 def Exception_handler(req:Request,exc:MyException):

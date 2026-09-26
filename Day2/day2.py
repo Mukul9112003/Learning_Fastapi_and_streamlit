@@ -1,5 +1,6 @@
-from fastapi import FastAPI,HTTPException,status
+from fastapi import FastAPI, HTTPException, status
 from pydantic import BaseModel
+
 app=FastAPI()
 class data_request(BaseModel):
     id:int | None=None

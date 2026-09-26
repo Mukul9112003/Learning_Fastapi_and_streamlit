@@ -1,5 +1,7 @@
-from abc import ABC,abstractmethod
+from abc import ABC, abstractmethod
 from typing import Any
+
+
 class DataBase(ABC):
     @abstractmethod
     def save_data(self,Data:dict)->str:

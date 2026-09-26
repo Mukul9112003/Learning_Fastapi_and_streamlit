@@ -1,7 +1,9 @@
-from fastapi import FastAPI,Request,status
+from fastapi import FastAPI, Request, status
 from fastapi.responses import JSONResponse
-from Day3.route import mukul
+
 from Day3.custom_exception import MyException
+from Day3.route import mukul
+
 app=FastAPI(title="This is my learning process")
 @app.exception_handler(MyException)
 def exception_handler(res:Request,exec:MyException):

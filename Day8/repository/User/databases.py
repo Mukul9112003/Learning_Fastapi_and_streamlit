@@ -1,8 +1,9 @@
+from Model.user_table import UserTable
 from repository.User.User import DataBase
 from sqlalchemy import select
-from Model.user_table import UserTable
 from sqlalchemy.orm import Session
-from Database.sql_dataconnection import get_database
+
+
 class Sql_Database(DataBase):
     def __init__(self,session:Session):
         self.db=session

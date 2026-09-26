@@ -1,6 +1,7 @@
-from fastapi import FastAPI,Request,Depends
-from sqlalchemy import create_engine,String,Integer,Column
-from sqlalchemy.orm import sessionmaker,declarative_base,Session
+from fastapi import FastAPI
+from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy.orm import declarative_base, sessionmaker
+
 app=FastAPI()
 DATABASE="sqlite:///./test.db" #"mysql+pymysql://root:your_password@localhost:3306/company_db"
 engine=create_engine(DATABASE,connect_args={"check_same_thread":False})
