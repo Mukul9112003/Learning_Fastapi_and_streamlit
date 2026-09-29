@@ -1,8 +1,10 @@
-from redis.asyncio import Redis
-from fastapi import FastAPI
 import json
+
 from database.database_connection import DatabaseConnection
+from fastapi import FastAPI
 from persistence.user_persistence import UserPersistence
+from redis.asyncio import Redis
+
 app=FastAPI(title="Backend ")
 database=DatabaseConnection(
     url="mongodb://localhost:27017",
@@ -20,7 +22,7 @@ async def create_test_user():
         "email":"mukul@example.com"
     }
     user_id=user_persistence.create(user)
-    await redis_client.set(f"user:{str(user_id)}",json.dumps(user),ex=60)
+    await redis_client.set(f"user:{user_id!s}",json.dumps(user),ex=60)
     return{
         "message":"User created",
         "user_id":str(user_id)

@@ -1,4 +1,6 @@
 from database.crud import CRUD
+
+
 class UserPersistence:
     def __init__(self,database):
         collection=database.get_collection("user")

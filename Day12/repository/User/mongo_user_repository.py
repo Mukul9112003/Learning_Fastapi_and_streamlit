@@ -1,5 +1,5 @@
-from repository.User.user_repository import UserRepository
 from database.crud_mongo import CRUD
+from repository.User.user_repository import UserRepository
 
 
 class MongoUserRepository(UserRepository):

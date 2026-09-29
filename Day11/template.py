@@ -1,5 +1,5 @@
 from pathlib import Path
-import os
+
 list_of_files=[
     "database",
     "database/database_connection.py"

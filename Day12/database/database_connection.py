@@ -1,4 +1,6 @@
 from pymongo import MongoClient
+
+
 class DataBaseConnection:
     def __init__(self):
         self.database_url=MongoClient("mongodb://localhost:27017/")

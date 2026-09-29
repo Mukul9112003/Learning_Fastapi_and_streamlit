@@ -1,6 +1,6 @@
-from fastapi import FastAPI,Depends
-from utils.dependency import get_user_service
+from fastapi import Depends, FastAPI
 from pydantic import BaseModel
+from utils.dependency import get_user_service
 
 
 class RegisterRequest(BaseModel):
@@ -14,6 +14,7 @@ def get_home():
 
 
 @app.post("/register")
-def register(data:RegisterRequest,user_service=Depends(get_user_service)):
+def register(data:RegisterRequest,user_service=Depends(get_user_service) ,# noqa: B008
+             ):
 
     return user_service.register(data)
